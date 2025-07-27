@@ -15,5 +15,11 @@ public class PlayerMovement : MonoBehaviour
 
         // Move the player (in world space)
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
+
+if (direction != Vector3.zero)
+{
+    transform.forward = direction; // Makes the character face the moving direction
+}
+
     }
 }
